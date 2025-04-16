@@ -61,12 +61,11 @@ console.log("L'indice di Lewis è --> ", lewisIndex); // 6
 
 // 9. Unisci tutti gli insegnanti nell'array teachers in una stringa
 // separata da virgole e salvala nella variabile teachersString
-let teachersString = null;
+let teachersString = "";
 for (let i = 0; i < teachers.length; i++) {
   teachersString = teachers[i] + ", " + teachersString; 
 }
-
-console.log("Gli insegnanti sono --> ", teachersString); //bisogna rimuovere nulla (ci penso dopo)
+console.log("Gli insegnanti nella stringa teachersString sono --> ", teachersString); 
 
 // 10. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
