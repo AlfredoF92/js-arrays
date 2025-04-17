@@ -22,18 +22,19 @@ y=0;
 for(i=1; i<=teachers.length; i++){ 
   reversedTeachers[y]= teachers[teachers.length-i];
   y++;
-  console.log("Nome da inserire: teacher[", i,  "] --> ", teachers[teachers.length-i] );
-  console.log("L'array reversedTeachers ora è --> ", y, reversedTeachers);
+
+ // console.log("Nome da inserire: teacher[", i,  "] --> ", teachers[teachers.length-i] );
+  //console.log("L'array reversedTeachers ora è --> ", y, reversedTeachers);
 }
 
- console.log("#######################################################################");
+ //console.log("#######################################################################");
  let reversedTeachersPush = [];
 
  for(i=1; i<=teachers.length; i++){ 
-  reversedTeachersPush.push(teachers[teachers.length-i]);
+   reversedTeachersPush.push(teachers[teachers.length-i]);
   
-   console.log("Nome da inserire: teacher[", i,  "] --> ", teachers[teachers.length-i] );
-   console.log("L'array reversedTeachers ora è --> ", y, reversedTeachersPush);
+   //console.log("Nome da inserire: teacher[", i,  "] --> ", teachers[teachers.length-i] );
+   //console.log("L'array reversedTeachers ora è --> ", y, reversedTeachersPush);
  }
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
@@ -44,11 +45,35 @@ for(i=0; i<teachers.length; i++){
     longNames.push(teachers[i]);
   }
 }
-console.log("L'array longNames ora è --> ", longNames); 
-// 3. Rimuovi 'Ed' dall'array teachers
+
+//console.log("L'array longNames ora è --> ", longNames); 
+
+
+
+console.log("L'array teachers con FABIO è --> ", reversedTeachers );
+
+//ELIMINA ED MANUALMENTE
+for(i = 0; i < reversedTeachers.length; i++) {
+  if(reversedTeachers[i] === "Ed") {
+    console.log("Ho trovato ED in posizione ", i);
+
+    for(y = i; y < reversedTeachers.length; y++) {
+      reversedTeachers[i] = reversedTeachers[i + 1];
+      console.log("Ho spostato ", reversedTeachers[i+1], " in posizione ", i);
+    }
+    reversedTeachers.pop();
+  }
+}
+
+console.log("L'array reversedTeachers senza ED è --> ", reversedTeachers);
+
+
+
+/*
 for(i=0; i<teachers.length; i++){
   if(teachers[i]==="Ed"){
     teachers.splice(i, 1);
   }
 }
 console.log("L'array teachers senza ED è --> ", teachers); 
+*/
